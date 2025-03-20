@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+        <meta name="keywords" content="">
+		<title>Taha - Portfolio Single Page</title>
+		<!-- Favicon -->
+        <link href="assets/images/favicon.png" rel="shortcut icon">
+		<!-- CSS -->
+		<link href="assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/plugins/magnific-popup/magnific-popup.min.css" rel="stylesheet">
+		<link href="assets/plugins/swiper/swiper-bundle.min.css" rel="stylesheet">
+		<link href="assets/css/theme.css" rel="stylesheet">
+		<!-- Fonts/Icons -->
+		<link href="assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+		<link href="assets/plugins/fontawesome/css/all.css" rel="stylesheet">
+		<style>
+body {
+    background-color: #000; /* Dark background for contrast */
+    font-family: 'Poppins', sans-serif;
+}
+
+.image-row {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.scroll-hover {
+    flex: 1 1 30%; /* Default flex behavior */
+    max-width: 30%; /* Default max width */
+    height: 45vh; /* Default height */
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 4px; /* for gradient border */
+    background: linear-gradient(135deg, #a855f7, #ec4899); /* gradient border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+.scroll-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 10px rgba(168, 85, 247, 0.6);
+}
+
+.scroll-hover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateY(0);
+    transition: transform 5s linear;
+    border-radius: 16px; /* rounded inner image */
+    z-index: 1;
+}
+
+.scroll-hover:hover img {
+    transform: translateY(calc(-100% + 45vh)); /* Adjusted for default height */
+}
+
+/* Responsive Tweaks */
+@media (max-width: 1024px) {
+    .scroll-hover {
+        flex: 1 1 45%; /* Two items per row on tablets */
+        max-width: 45%;
+        height: 40vh; /* Adjusted height for tablets */
+    }
+
+    .scroll-hover:hover img {
+        transform: translateY(calc(-100% + 40vh)); /* Adjusted for tablet height */
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll-hover {
+        flex: 1 1 100%; /* One item per row on mobile */
+        max-width: 100%;
+        height: 35vh; /* Adjusted height for mobile */
+    }
+
+    .scroll-hover:hover img {
+        transform: translateY(calc(-100% + 35vh)); /* Adjusted for mobile height */
+    }
+}
+.scroll-hoverz {
+    flex: 1 1 30%; /* Default flex behavior */
+    max-width: 30%; /* Default max width */
+    height: 45vh; /* Default height */
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 4px; /* for gradient border */
+    background: linear-gradient(135deg, #a855f7, #ec4899); /* gradient border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+.scroll-hoverz:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 10px rgba(168, 85, 247, 0.6);
+}
+
+.scroll-hoverz img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateY(0);
+    transition: transform 0.5s linear;
+    border-radius: 16px; /* rounded inner image */
+    z-index: 1;
+}
+
+.scroll-hoverz:hover img {
+    transform: translateY(calc(-100% + 45vh)); /* Adjusted for default height */
+}
+
+/* Responsive Tweaks */
+@media (max-width: 1024px) {
+    .scroll-hoverz {
+        flex: 1 1 45%; /* Two items per row on tablets */
+        max-width: 45%;
+        height: 40vh; /* Adjusted height for tablets */
+    }
+
+    .scroll-hoverz:hover img {
+        transform: translateY(calc(-100% + 40vh)); /* Adjusted for tablet height */
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll-hoverz {
+        flex: 1 1 100%; /* One item per row on mobile */
+        max-width: 100%;
+        height: 35vh; /* Adjusted height for mobile */
+    }
+
+    .scroll-hoverz:hover img {
+        transform: translateY(calc(-100% + 35vh)); /* Adjusted for mobile height */
+    }
+}
+.scroll-hovers {
+    flex: 1 1 30%; /* Default flex behavior */
+    max-width: 30%; /* Default max width */
+    height: 45vh; /* Default height */
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 4px; /* for gradient border */
+    background: linear-gradient(135deg, #a855f7, #ec4899); /* gradient border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+.scroll-hovers:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 10px rgba(168, 85, 247, 0.6);
+}
+
+.scroll-hovers img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateY(0);
+    transition: transform 1.5s linear;
+    border-radius: 16px; /* rounded inner image */
+    z-index: 1;
+}
+
+.scroll-hovers:hover img {
+    transform: translateY(calc(-100% + 45vh)); /* Adjusted for default height */
+}
+
+/* Responsive Tweaks */
+@media (max-width: 1024px) {
+    .scroll-hovers {
+        flex: 1 1 45%; /* Two items per row on tablets */
+        max-width: 45%;
+        height: 40vh; /* Adjusted height for tablets */
+    }
+
+    .scroll-hovers:hover img {
+        transform: translateY(calc(-100% + 40vh)); /* Adjusted for tablet height */
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll-hovers {
+        flex: 1 1 100%; /* One item per row on mobile */
+        max-width: 100%;
+        height: 35vh; /* Adjusted height for mobile */
+    }
+
+    .scroll-hovers:hover img {
+        transform: translateY(calc(-100% + 35vh)); /* Adjusted for mobile height */
+    }
+}
+.scroll-hoverl {
+    flex: 1 1 30%; /* Default flex behavior */
+    max-width: 30%; /* Default max width */
+    height: 45vh; /* Default height */
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 4px; /* for gradient border */
+    background: linear-gradient(135deg, #a855f7, #ec4899); /* gradient border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+.scroll-hoverl:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 10px rgba(168, 85, 247, 0.6);
+}
+
+.scroll-hoverl img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateY(0);
+    transition: transform 9.3s linear;
+    border-radius: 16px; /* rounded inner image */
+    z-index: 1;
+}
+
+.scroll-hoverl:hover img {
+    transform: translateY(calc(-100% + 45vh)); /* Adjusted for default height */
+}
+
+/* Responsive Tweaks */
+@media (max-width: 1024px) {
+    .scroll-hoverl {
+        flex: 1 1 45%; /* Two items per row on tablets */
+        max-width: 45%;
+        height: 40vh; /* Adjusted height for tablets */
+    }
+
+    .scroll-hoverl:hover img {
+        transform: translateY(calc(-100% + 40vh)); /* Adjusted for tablet height */
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll-hoverl {
+        flex: 1 1 100%; /* One item per row on mobile */
+        max-width: 100%;
+        height: 35vh; /* Adjusted height for mobile */
+    }
+
+    .scroll-hoverl:hover img {
+        transform: translateY(calc(-100% + 35vh)); /* Adjusted for mobile height */
+    }
+}
+.scroll-hover0 {
+    flex: 1 1 30%; /* Default flex behavior */
+    max-width: 30%; /* Default max width */
+    height: 45vh; /* Default height */
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 4px; /* for gradient border */
+    background: linear-gradient(135deg, #a855f7, #ec4899); /* gradient border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+.scroll-hover0:hover {
+   
+    box-shadow: 0 10px 10px rgba(168, 85, 247, 0.6);
+}
+
+.scroll-hover0 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+   
+    border-radius: 16px; /* rounded inner image */
+    z-index: 1;
+}
+
+
+
+/* Responsive Tweaks */
+@media (max-width: 1024px) {
+    .scroll-hover0 {
+        flex: 1 1 45%; /* Two items per row on tablets */
+        max-width: 45%;
+        height: 40vh; /* Adjusted height for tablets */
+    }
+
+    .scroll-hover0:hover img {
+        transform: translateY(calc(-100% + 40vh)); /* Adjusted for tablet height */
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll-hover0 {
+        flex: 1 1 100%; /* One item per row on mobile */
+        max-width: 100%;
+        height: 35vh; /* Adjusted height for mobile */
+    }
+
+    .scroll-hover0:hover img {
+        transform: translateY(calc(-100% + 35vh)); /* Adjusted for mobile height */
+    }
+}
+
+
+		</style>
+	</head>
+	<body data-preloader="true">
+
+		<!-- Cursor -->
+		<div id="cursor"></div>
+		<!-- end Cursor -->
+
+		<!-- Header -->
+		<div class="header">
+			<div class="container-fluid">
+				<div class="header-wrapper">
+					<!-- Header Logo -->
+					<div class="header-logo">
+						<h2><a href="index.html">Taha Shah</a></h2>
+					</div>
+					<!-- Header Nav -->
+					<div class="header-nav">
+						<a class="button button-sm button-dot me-2 me-lg-3" href="#">
+							<span data-text="Let's Talk">Let's Talk</span>
+						</a>
+						<!-- Nav Menu Toggle -->
+						<button id="nav-toggle" class="button button-sm button-dot button-white">
+							<span data-text="Menu">Menu</span>
+						</button>
+						<!-- Nav Menu Box -->
+						<div class="nav-box">
+							<ul class="nav">
+								<li class="nav-item">
+									<a class="nav-link" href="index.html"><i class="bi bi-arrow-right"></i>About</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="index.html"><i class="bi bi-arrow-right"></i>Services</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link active" href="#portfolio"><i class="bi bi-arrow-right"></i>Portfolio</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="index.html"><i class="bi bi-arrow-right"></i>Awards</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="index.html"><i class="bi bi-arrow-right"></i>Testimonial</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="index.html"><i class="bi bi-arrow-right"></i>Blog</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="index.html"><i class="bi bi-arrow-right"></i>Contact</a>
+								</li>
+							</ul>
+						</div>
+					</div><!-- end header-nav -->
+				</div><!-- end header-wrapper -->
+			</div><!-- end container -->
+		</div>
+		<!-- end Header -->
+
+		<main>
+
+			<div class="section">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+							<h1 class="display-3 fw-medium">Project <span class="text-gradient">JBH Chemicals</span></h1>
+							<p>JBH Chemical Ventures delivers top-tier epoxy resin solutions, and their website needed to match that excellence. I designed a sleek, high-performance platform with smooth navigation, clear product displays, and an intuitive user experience. The result? A bold, professional digital presence that makes exploring JBH’s innovative chemical solutions effortless.  </p>
+						</div>
+					</div><!-- end row -->
+					<div class="row g-4 mt-5">
+						<div class="col-12 col-md-6 col-lg-3">
+							<div class="fancy-box">
+								<h6 class="sm-heading mb-1">Services:</h6>
+								<ul class="list-inline-dot">
+									<li>Web Development & Designing</li>
+									
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 col-lg-3">
+							<div class="fancy-box">
+								<h6 class="sm-heading mb-1">Type:</h6>
+								<p>Wordpress</p>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 col-lg-3">
+							<div class="fancy-box">
+								<h6 class="sm-heading mb-1">Project link:</h6>
+								<a class="link-hover" href="http://jbhchemicalventures.com/">
+									<span data-text="www.jbhchemicalventures.com">http://jbhchemicalventures.com/</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 col-lg-3">
+							<div class="fancy-box">
+								<h6 class="sm-heading mb-1">Duration:</h6>
+								<p>1 Month</p>
+							</div>
+						</div>
+					</div><!-- end row -->
+				</div><!-- end container -->
+			</div>
+
+			<div class="section-box">
+				<div class="section-sm bg-dark border-radius-1">
+					<div class="container">
+						<h1 class="display-3 fw-medium" style="text-align: center;"> 
+							<span class="text-gradient">Wordpress</span>
+						</h1>
+						
+						<!-- Text -->
+						<div class="row">
+							
+							<div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+								<p>JBH Chemical Ventures needed a website as strong and refined as their epoxy resin solutions. The challenge was to present technical products in a way that was both engaging and easy to navigate. I crafted a clean, structured platform with seamless browsing, clear product categorization, and a sleek design that reflects their industry expertise. The result? A high-performance website that makes discovering JBH’s innovative chemical solutions effortless and professional.   </p>
+							</div>
+						</div><!-- end row -->
+						<!-- Project Media -->
+						<!-- Wrapper div to easily place it in your website -->
+						<div class="image-row">
+							<div class="scroll-hoverl">
+							  <img src="assets/images/jbh 1.png" alt="Image 1">
+							</div>
+							<div class="scroll-hover">
+							  <img src="assets/images/jbh 3.png" alt="Image 2">
+							</div>
+							<div class="scroll-hoverz">
+							  <img src="assets/images/jbh 2.png" alt="Image 3">
+							</div>
+						  </div>
+						  
+						  
+						  
+					
+
+			<!---		<div class="row g-4 g-lg-5 mt-1">
+							<div class="col-12">
+								<img class="border-radius" src="assets/images/portfolio-img-wide.jpg" alt="">
+							</div>
+							<div class="col-12 col-md-6">
+								 Image Lightbox 								<a class="lightbox-image-box border-radius" href="assets/images/portfolio-img.jpg">
+									<img src="assets/images/portfolio-img.jpg" alt="">
+									<div class="lightbox-icon">
+										<i class="bi bi-arrows-fullscreen"></i>
+									</div>
+								</a>
+							</div>
+							<div class="col-12 col-md-6">
+								 Video Lightbox 
+								<a class="lightbox-media-box border-radius icon-lg" href="https://www.youtube.com/watch?v=W-j4QGAgNu8">
+									<img src="assets/images/portfolio-img.jpg" alt="">
+									<div class="lightbox-icon">
+										<i class="bi bi-play-fill"></i>
+									</div>
+								</a>
+							</div>
+						</div> end row -->  
+						<div class="row mt-5">
+							<div class="col-6">
+								<a class="button" href="portfolio-iqraq.html">
+									<span data-text="Prev Project">Prev Project</span>
+								</a>
+							</div>
+							<div class="col-6 text-end">
+								<a class="button" href="portfolio-kzbuild.html">
+									<span data-text="Next Project">Next Project</span>
+								</a>
+							</div>
+						</div>
+					</div><!-- end container -->
+				</div>
+			</div>
+
+		</main>
+
+		<!-- Footer -->
+		<div class="py-4 py-lg-5 text-center">
+			<p>&copy; 2024 Taha Shah, Portfolio. All Rights Reserved</p>
+		</div>
+		<!-- end Footer -->
+
+		<!-- Scroll To Top -->
+		<div class="scrolltotop">
+			<a class="button-circle" href="#">
+				<i class="bi bi-arrow-up"></i>
+				<i class="bi bi-arrow-up"></i>
+			</a>
+		</div>
+		<!-- end Scroll To Top -->
+
+		<!-- JavaScripts -->
+		<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+		<script src="assets/plugins/jquery.min.js"></script>
+		<script src="assets/plugins/plugins.js"></script>
+		<script src="assets/js/functions.js"></script>
+	</body>
+</html>
